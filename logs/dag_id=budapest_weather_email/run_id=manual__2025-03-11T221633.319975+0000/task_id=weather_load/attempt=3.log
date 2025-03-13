@@ -1,0 +1,150 @@
+[2025-03-13T13:57:08.200+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-13T13:57:08.223+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: budapest_weather_email.weather_load manual__2025-03-11T22:16:33.319975+00:00 [queued]>
+[2025-03-13T13:57:08.233+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: budapest_weather_email.weather_load manual__2025-03-11T22:16:33.319975+00:00 [queued]>
+[2025-03-13T13:57:08.234+0000] {taskinstance.py:2867} INFO - Starting attempt 3 of 3
+[2025-03-13T13:57:08.245+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): weather_load> on 2025-03-11 22:16:33.319975+00:00
+[2025-03-13T13:57:08.254+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1232) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-13T13:57:08.256+0000] {standard_task_runner.py:72} INFO - Started process 1234 to run task
+[2025-03-13T13:57:08.256+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'budapest_weather_email', 'weather_load', 'manual__2025-03-11T22:16:33.319975+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/budapest_weather_email.py', '--cfg-path', '/tmp/tmp4hasba9y']
+[2025-03-13T13:57:08.257+0000] {standard_task_runner.py:105} INFO - Job 111: Subtask weather_load
+[2025-03-13T13:57:08.299+0000] {task_command.py:467} INFO - Running <TaskInstance: budapest_weather_email.weather_load manual__2025-03-11T22:16:33.319975+00:00 [running]> on host c38876581fe7
+[2025-03-13T13:57:08.379+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='budapest_weather_email' AIRFLOW_CTX_TASK_ID='weather_load' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T22:16:33.319975+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T22:16:33.319975+00:00'
+[2025-03-13T13:57:08.380+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-13T13:57:08.381+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-13T13:57:08.381+0000] {logging_mixin.py:190} INFO - Current task name:weather_load state:running start_date:2025-03-13 13:57:08.223948+00:00
+[2025-03-13T13:57:08.382+0000] {logging_mixin.py:190} INFO - Dag name:budapest_weather_email and current dag run status:running
+[2025-03-13T13:57:08.382+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-13T13:57:08.383+0000] {logging_mixin.py:190} INFO - <class 'list'>
+[2025-03-13T13:57:08.391+0000] {base.py:84} INFO - Retrieving connection 'weather_connect'
+[2025-03-13T13:57:08.395+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_00', 13.020759582519531)
+[2025-03-13T13:57:08.399+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.404+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_01', 13.312171936035156)
+[2025-03-13T13:57:08.405+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.410+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_02', 11.681031227111816)
+[2025-03-13T13:57:08.411+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.415+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_03', 11.534880638122559)
+[2025-03-13T13:57:08.417+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.422+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_04', 10.777239799499512)
+[2025-03-13T13:57:08.423+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.427+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_05', 11.15715503692627)
+[2025-03-13T13:57:08.428+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.433+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_06', 12.1671142578125)
+[2025-03-13T13:57:08.434+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.439+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_07', 11.330656051635742)
+[2025-03-13T13:57:08.440+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.444+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_08', 10.530858993530273)
+[2025-03-13T13:57:08.445+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.450+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_09', 10.811727523803711)
+[2025-03-13T13:57:08.452+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.456+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_10', 11.564693450927734)
+[2025-03-13T13:57:08.457+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.462+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_11', 11.76190185546875)
+[2025-03-13T13:57:08.463+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.468+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_12', 11.437507629394531)
+[2025-03-13T13:57:08.470+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.474+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_13', 10.927525520324707)
+[2025-03-13T13:57:08.476+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.481+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_14', 10.817611694335938)
+[2025-03-13T13:57:08.482+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.487+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_15', 11.448698997497559)
+[2025-03-13T13:57:08.488+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.493+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_16', 10.9111328125)
+[2025-03-13T13:57:08.494+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.499+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_17', 11.070024490356445)
+[2025-03-13T13:57:08.500+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.505+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_18', 10.910931587219238)
+[2025-03-13T13:57:08.506+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.511+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_19', 10.426015853881836)
+[2025-03-13T13:57:08.512+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.517+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_20', 9.403331756591797)
+[2025-03-13T13:57:08.519+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.523+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_21', 8.715526580810547)
+[2025-03-13T13:57:08.525+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.529+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_22', 8.294590950012207)
+[2025-03-13T13:57:08.531+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.536+0000] {sql.py:511} INFO - Running statement: 
+    INSERT INTO budapest_weather (date, apparent_temperature)
+    VALUES (%s, %s)
+    , parameters: ('03/13/2025_23', 7.341316223144531)
+[2025-03-13T13:57:08.538+0000] {sql.py:520} INFO - Rows affected: 1
+[2025-03-13T13:57:08.539+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-13T13:57:08.549+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-13T13:57:08.550+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=budapest_weather_email, task_id=weather_load, run_id=manual__2025-03-11T22:16:33.319975+00:00, execution_date=20250311T221633, start_date=20250313T135708, end_date=20250313T135708
+[2025-03-13T13:57:08.572+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-13T13:57:08.573+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-13T13:57:08.573+0000] {logging_mixin.py:190} INFO - Dag name:budapest_weather_email queued_at:2025-03-13 13:57:04.276854+00:00
+[2025-03-13T13:57:08.574+0000] {logging_mixin.py:190} INFO - Task hostname:c38876581fe7 operator:_PythonDecoratedOperator
+[2025-03-13T13:57:08.591+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-13T13:57:08.607+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-13T13:57:08.609+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

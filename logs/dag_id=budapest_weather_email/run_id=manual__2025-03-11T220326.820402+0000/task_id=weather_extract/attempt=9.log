@@ -1,0 +1,29 @@
+[2025-03-12T22:19:51.843+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T22:19:51.866+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: budapest_weather_email.weather_extract manual__2025-03-11T22:03:26.820402+00:00 [queued]>
+[2025-03-12T22:19:51.876+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: budapest_weather_email.weather_extract manual__2025-03-11T22:03:26.820402+00:00 [queued]>
+[2025-03-12T22:19:51.877+0000] {taskinstance.py:2867} INFO - Starting attempt 9 of 9
+[2025-03-12T22:19:51.894+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): weather_extract> on 2025-03-11 22:03:26.820402+00:00
+[2025-03-12T22:19:51.904+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=285) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T22:19:51.906+0000] {standard_task_runner.py:72} INFO - Started process 294 to run task
+[2025-03-12T22:19:51.906+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'budapest_weather_email', 'weather_extract', 'manual__2025-03-11T22:03:26.820402+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/budapest_weather_email.py', '--cfg-path', '/tmp/tmprj41b3av']
+[2025-03-12T22:19:51.908+0000] {standard_task_runner.py:105} INFO - Job 78: Subtask weather_extract
+[2025-03-12T22:19:51.978+0000] {task_command.py:467} INFO - Running <TaskInstance: budapest_weather_email.weather_extract manual__2025-03-11T22:03:26.820402+00:00 [running]> on host c38876581fe7
+[2025-03-12T22:19:52.111+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='budapest_weather_email' AIRFLOW_CTX_TASK_ID='weather_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T22:03:26.820402+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T22:03:26.820402+00:00'
+[2025-03-12T22:19:52.114+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T22:19:52.115+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T22:19:52.116+0000] {logging_mixin.py:190} INFO - Current task name:weather_extract state:running start_date:2025-03-12 22:19:51.867566+00:00
+[2025-03-12T22:19:52.117+0000] {logging_mixin.py:190} INFO - Dag name:budapest_weather_email and current dag run status:running
+[2025-03-12T22:19:52.118+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T22:19:52.238+0000] {logging_mixin.py:190} INFO - {"date":{"03\/12\/2025_00":"03\/12\/2025_00","03\/12\/2025_01":"03\/12\/2025_01","03\/12\/2025_02":"03\/12\/2025_02","03\/12\/2025_03":"03\/12\/2025_03","03\/12\/2025_04":"03\/12\/2025_04","03\/12\/2025_05":"03\/12\/2025_05","03\/12\/2025_06":"03\/12\/2025_06","03\/12\/2025_07":"03\/12\/2025_07","03\/12\/2025_08":"03\/12\/2025_08","03\/12\/2025_09":"03\/12\/2025_09","03\/12\/2025_10":"03\/12\/2025_10","03\/12\/2025_11":"03\/12\/2025_11","03\/12\/2025_12":"03\/12\/2025_12","03\/12\/2025_13":"03\/12\/2025_13","03\/12\/2025_14":"03\/12\/2025_14","03\/12\/2025_15":"03\/12\/2025_15","03\/12\/2025_16":"03\/12\/2025_16","03\/12\/2025_17":"03\/12\/2025_17","03\/12\/2025_18":"03\/12\/2025_18","03\/12\/2025_19":"03\/12\/2025_19","03\/12\/2025_20":"03\/12\/2025_20","03\/12\/2025_21":"03\/12\/2025_21","03\/12\/2025_22":"03\/12\/2025_22","03\/12\/2025_23":"03\/12\/2025_23"}}
+[2025-03-12T22:19:52.240+0000] {python.py:240} INFO - Done. Returned value was: {"date":{"03\/12\/2025_00":"03\/12\/2025_00","03\/12\/2025_01":"03\/12\/2025_01","03\/12\/2025_02":"03\/12\/2025_02","03\/12\/2025_03":"03\/12\/2025_03","03\/12\/2025_04":"03\/12\/2025_04","03\/12\/2025_05":"03\/12\/2025_05","03\/12\/2025_06":"03\/12\/2025_06","03\/12\/2025_07":"03\/12\/2025_07","03\/12\/2025_08":"03\/12\/2025_08","03\/12\/2025_09":"03\/12\/2025_09","03\/12\/2025_10":"03\/12\/2025_10","03\/12\/2025_11":"03\/12\/2025_11","03\/12\/2025_12":"03\/12\/2025_12","03\/12\/2025_13":"03\/12\/2025_13","03\/12\/2025_14":"03\/12\/2025_14","03\/12\/2025_15":"03\/12\/2025_15","03\/12\/2025_16":"03\/12\/2025_16","03\/12\/2025_17":"03\/12\/2025_17","03\/12\/2025_18":"03\/12\/2025_18","03\/12\/2025_19":"03\/12\/2025_19","03\/12\/2025_20":"03\/12\/2025_20","03\/12\/2025_21":"03\/12\/2025_21","03\/12\/2025_22":"03\/12\/2025_22","03\/12\/2025_23":"03\/12\/2025_23"}}
+[2025-03-12T22:19:52.267+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T22:19:52.268+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=budapest_weather_email, task_id=weather_extract, run_id=manual__2025-03-11T22:03:26.820402+00:00, execution_date=20250311T220326, start_date=20250312T221951, end_date=20250312T221952
+[2025-03-12T22:19:52.296+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-12T22:19:52.297+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-12T22:19:52.298+0000] {logging_mixin.py:190} INFO - Dag name:budapest_weather_email queued_at:2025-03-12 22:19:49.276131+00:00
+[2025-03-12T22:19:52.298+0000] {logging_mixin.py:190} INFO - Task hostname:c38876581fe7 operator:_PythonDecoratedOperator
+[2025-03-12T22:19:52.323+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-12T22:19:52.362+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T22:19:52.365+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
